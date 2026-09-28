@@ -208,7 +208,8 @@ smart-fire-detection-esp32/
 
 Wokwi project:
 
-[Open Wokwi Simulation](PASTE-YOUR-WOKWI-LINK-HERE)
+[Open Wokwi Simulation](https://wokwi.com/projects/476428820570747905
+)
 
 ---
 
