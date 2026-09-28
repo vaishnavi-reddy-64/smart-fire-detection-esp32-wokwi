@@ -1,0 +1,14 @@
+DHT22 ───────────────┐
+                     │
+MQ-2 ────────────────┤
+                     ├──> ESP32
+LDR simulated ───────┘      │
+                            │
+                     Risk Analysis
+                            │
+              ┌─────────────┼─────────────┐
+              ↓             ↓             ↓
+           Buzzer        Fire LED       Relay
+                                          │
+                                          ↓
+                                   Pump Simulation

@@ -1,0 +1,47 @@
+SMART FIRE DETECTION & AUTOMATIC RESPONSE SYSTEM
+ESP32 PIN CONNECTIONS
+===============================================
+
++---------------------------+----------------+---------------------------+
+| Component                 | ESP32 Pin      | Connection / Purpose      |
++---------------------------+----------------+---------------------------+
+| DHT22 Temperature Sensor  | GPIO 4         | DATA                      |
+| DHT22                     | 3.3V           | VCC                       |
+| DHT22                     | GND            | Ground                    |
++---------------------------+----------------+---------------------------+
+| MQ-2 Smoke/Gas Sensor     | GPIO 34        | AO (Analog Output)        |
+| MQ-2                     | 5V             | VCC (Wokwi simulation)    |
+| MQ-2                     | GND            | Ground                    |
++---------------------------+----------------+---------------------------+
+| LDR (Simulated Flame)     | GPIO 27        | Digital/Output Signal     |
+| LDR                       | VCC            | Supply                    |
+| LDR                       | GND            | Ground                    |
++---------------------------+----------------+---------------------------+
+| Buzzer                    | GPIO 26        | Positive / Signal         |
+| Buzzer                    | GND            | Negative                  |
++---------------------------+----------------+---------------------------+
+| Fire LED                  | GPIO 2         | Through ~220Ω resistor    |
+| Fire LED                  | GND            | Ground                    |
++---------------------------+----------------+---------------------------+
+| Relay Module              | GPIO 25        | IN (Control Signal)       |
+| Relay Module              | VCC            | Supply                    |
+| Relay Module              | GND            | Ground                    |
++---------------------------+----------------+---------------------------+
+
+IMPORTANT NOTES
+---------------
+
+1. DHT22 DATA → GPIO 4
+2. MQ-2 AO → GPIO 34
+3. LDR output → GPIO 27
+4. Buzzer → GPIO 26
+5. Relay IN → GPIO 25
+6. Fire LED → GPIO 2 through approximately 220Ω resistor
+7. All components share a common GND in the Wokwi simulation.
+8. GPIO 34 is used as an ADC-capable input for the MQ-2 analog output.
+9. The LDR is being used as a simulated flame/light condition, not as a
+   dedicated flame sensor.
+10. The pump is represented by an LED in the Wokwi simulation.
+11. The MQ-2 threshold used in the prototype is a simulation/demo value.
+12. For real hardware, verify MQ-2 output voltage compatibility with the
+    ESP32's 3.3V GPIO/ADC input and use appropriate level shifting if needed.
